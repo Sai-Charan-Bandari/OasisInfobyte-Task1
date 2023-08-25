@@ -1,7 +1,9 @@
 const intro = (e)=>{
-    if(e) document.getElementsByClassName('result')[0].innerHTML="#BSC#"
+    if(e) {
+        document.getElementsByClassName('result')[0].innerHTML="#BSC#"
+        setTimeout(intro , 1000 , false)
+    }
     else document.getElementsByClassName('result')[0].innerHTML=""
-    setTimeout(intro , 1000 , false)
 }
 setTimeout(intro , 500 , true)
 const input = (e)=>document.getElementsByClassName('operation')[0].innerHTML+=e;
